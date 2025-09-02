@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
-int main() {
+int main() 
+{
     float x1, y1, z1, x2, y2, z2, distance;
 
     printf("please enter cordinates of the firs points (x1, y1, z1) :\n");
