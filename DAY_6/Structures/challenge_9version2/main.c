@@ -47,7 +47,7 @@ void ajouter()
 		printf("\n\n---------------------------\n\n");
 		
 		char x[50];
-		printf("if you want to exit write  exit if you want to stay wite something : ");
+		printf("if you want to exit write  exit if you want to stay write something : ");
 		scanf("%s", x);
 
 		x[strcspn(x, "\n")] = 0;
