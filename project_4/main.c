@@ -64,7 +64,7 @@ void ajouterCours() {
         scanf("%d", &c.code);
         printf("Nom: ");
         
-	fgets(c.nom. sizeof(c.nom), stdin);
+	fgets(c.nom, sizeof(c.nom), stdin);
 	c.nom[strcspn(c.nom, "\n")] == 0;
 	getchar();
 	
@@ -76,13 +76,16 @@ void ajouterCours() {
     }
 }
 
-void afficherEtudiants() {
-    for (int i = 0; i < nbEtudiants; i++) {
+void afficherEtudiants() 
+{
+    for (int i = 0; i < nbEtudiants; i++) 
+    {
         printf("%d %s %s %d %.2f\n", etudiants[i].id, etudiants[i].nom, etudiants[i].prenom, etudiants[i].age, etudiants[i].moyenne);
     }
 }
 
-void afficherCours() {
+void afficherCours() 
+{
     for (int i = 0; i < nbCours; i++) {
         printf("%d %s %d %.2f\n", cours[i].code, cours[i].nom, cours[i].credits, cours[i].note);
     }
@@ -102,6 +105,7 @@ void rechercherEtudiant() {
 }
 
 void modifierNoteCours() {
+    
     int code;
     float note;
     printf("Code du cours: ");
@@ -118,7 +122,10 @@ void modifierNoteCours() {
 }
 
 int main() {
+    
     int choix;
+
+    printf("\n\n----------------------------\n\n");
     do {
         printf("1. Ajouter etudiant\n");
         printf("2. Ajouter cours\n");
@@ -137,6 +144,8 @@ int main() {
             case 6: modifierNoteCours(); break;
         }
     } while (choix != 0);
+
+    printf("\n\n-----------------------------------\n\n");
     return 0;
 }
 
