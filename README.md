@@ -19,13 +19,13 @@ The challenges in this repository cover:
 ## Challenges
 Each folder corresponds to a specific challenge. Examples include:
 
-- Challenge 01 – Variables and basic input/output  
-- Challenge 02 – Arrays and initialization  
-- Challenge 03 – Strings and character manipulation  
-- Challenge 04 – Structures and pointers  
-- Challenge 05 – Dynamic memory allocation  
-- Challenge 06 – Banking system (continuous balance updates)  
-- Challenge 07 – Contact management system  
+- DAY 01 – Variables and basic input/output  
+- DAY 02 – Arrays and initialization  
+- DAY 03 – Strings and character manipulation  
+- DAY 04 – Structures and pointers  
+- DAY 05 – Dynamic memory allocation  
+- DAY 06 – Banking system (continuous balance updates)  
+- DAY 07 – Contact management system  
 
 Additional challenges will be added as the program progresses.
 
