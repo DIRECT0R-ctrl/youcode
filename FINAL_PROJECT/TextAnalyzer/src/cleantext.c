@@ -3,7 +3,7 @@
 #include <string.h>
 #include "../include/AymanTextlib.h"
 
-// Clean text: remove punctuation, convert to lowercase
+
 void cleanText(const char *input, char *output)
 {
     int j = 0;
@@ -17,7 +17,7 @@ void cleanText(const char *input, char *output)
         {
             output[j++] = ' ';
         }
-        // ignore all other punctuation
+        
     }
     output[j] = '\0';
 }

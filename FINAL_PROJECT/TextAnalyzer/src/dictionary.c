@@ -2,7 +2,7 @@
 #include <string.h>
 #include "../include/AymanTextlib.h"
 
-// Add a word to the dictionary or increment its count
+
 void addWord(char word[], char dictionary[][MAX_WORD_LEN], int counts[], int *wordCount) 
 {
     if (*wordCount >= MAX_WORDS) return; // Safety check
@@ -21,7 +21,7 @@ void addWord(char word[], char dictionary[][MAX_WORD_LEN], int counts[], int *wo
     }
 }
 
-// Find a word in the dictionary, return index or -1
+
 int findWord(char word[], char dictionary[][MAX_WORD_LEN], int wordCount) 
 {
     for (int i = 0; i < wordCount; i++) 
@@ -31,3 +31,30 @@ int findWord(char word[], char dictionary[][MAX_WORD_LEN], int wordCount)
     return -1;
 }
 
+void sortAlpha(char dictionary[][MAX_WORD_LEN], int counts[], int wordCount)
+{
+	char tempWord[MAX_WORD_LEN];
+	int tempCount;
+
+	int i = 0;
+	while(i < wordCount - 1)
+	{
+		int j = i + 1;
+		while(j < wordCount)
+		{
+			if (strcmp(dictionary[i], dictionary[j]) > 0)
+			{
+				strcpy(tempWord, dictionary[i]);
+				strcpy(dictionary[i], dictionary[j]);
+				strcpy(dictionary[j], tempWord);
+
+
+				tempCount = counts[i];
+				counts[i] = counts[j];
+				counts[j] = tempCount;
+			}
+			j++;
+		}
+		i++;
+	}
+}

@@ -17,7 +17,8 @@ int main()
         printf("2. Show dictionary\n");
         printf("3. Exact search\n");
         printf("4. Partial search\n");
-        printf("5. Quit\n");
+	printf("5. Show dictionary (sorted alphabetically)\n");
+        printf("6. Quit\n");
         printf("Choose an option: ");
 
         int choice;
@@ -64,8 +65,15 @@ int main()
             substr[strcspn(substr, "\n")] = 0;
 
             searchPartial(substr, dictionary, counts, wordCount);
-        }
-        else if (choice == 5)
+        } else if (choice == 5)
+	{
+    		printf("\n--- Dictionary (Alphabetical Order) ---\n");
+    		sortAlpha(dictionary, counts, wordCount);
+    		for (int i = 0; i < wordCount; i++)
+        	printf("%-15s : %d\n", dictionary[i], counts[i]);
+	}
+
+        else if (choice == 6)
         {
             printf("Exiting program.\n");
             break;

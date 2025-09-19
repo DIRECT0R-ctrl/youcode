@@ -32,31 +32,25 @@ void addWord(char word[], char dictionary[][MAX_WORD_LEN], int counts[], int *wo
 // Finds word index in dictionary (-1 if not found)
 int findWord(char word[], char dictionary[][MAX_WORD_LEN], int wordCount);
 
-// -------------------------
-// Search functions
-// -------------------------
 
-// Search for exact word, returns index or -1
 int searchExact(const char *word, char dictionary[][MAX_WORD_LEN], int wordCount);
 
-// Search for partial word, prints all matches
+
 void searchPartial(const char *substr, char dictionary[][MAX_WORD_LEN], int counts[], int wordCount);
 
-// -------------------------
-// Analysis functions
-// -------------------------
 
-// Checks if a word is palindrome (returns 1 if yes)
 int isPalindrome(char word[]);
 
-// Finds and prints palindromes in words array
+
 void findPalindromes(char words[][MAX_WORD_LEN], int count);
 
-// Prints word cloud using stars for frequency
+
 void wordCloud(char words[][MAX_WORD_LEN], int counts[], int wordCount);
 
-// Central function: analyzes text completely
+
 void analyzeText(const char *input);
+
+void sortAlpha(char dictionary[][MAX_WORD_LEN], int counts[], int wordCount);
 
 #endif
 

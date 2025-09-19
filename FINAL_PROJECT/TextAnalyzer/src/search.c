@@ -2,7 +2,7 @@
 #include <string.h>
 #include "../include/AymanTextlib.h"
 
-// Search for an exact word, returns index or -1
+
 int searchExact(const char *word, char dictionary[][MAX_WORD_LEN], int wordCount)
 {
     for (int i = 0; i < wordCount; i++)
@@ -12,7 +12,7 @@ int searchExact(const char *word, char dictionary[][MAX_WORD_LEN], int wordCount
     return -1;
 }
 
-// Search for partial word, prints all matches
+
 void searchPartial(const char *substr, char dictionary[][MAX_WORD_LEN], int counts[], int wordCount)
 {
     int found = 0;
